@@ -60,7 +60,7 @@ jobs:
 
 workflows:
   version: 2
-  three_job_flow:
+  ca_project_codechan:
     jobs:
       - install dependencies
       - run tests
