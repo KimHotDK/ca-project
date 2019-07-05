@@ -1,7 +1,7 @@
 # Dockerfile for docker-flask web application
 
 # Add a base image to build this image off of
-FROM circleci/python:2.7
+FROM python:2.7-alpine
 
 #copy files required for app to run
 COPY . /usr/src/app
