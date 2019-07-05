@@ -63,7 +63,9 @@ workflows:
   ca_project_codechan:
     jobs:
       - install dependencies
-      - run tests
+      - run tests:
+          requires: 
+            - install dependencies
       - dockerize:
           requires:
             - install dependencies
