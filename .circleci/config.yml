@@ -62,7 +62,7 @@ workflows:
   version: 2
   ca_project_codechan:
     jobs:
-      - run_script:
+      - run_script
       - dockerize:
           requires:
             - run_script
