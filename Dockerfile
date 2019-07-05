@@ -1,7 +1,7 @@
 # Dockerfile for docker-flask web application
 
 # Add a base image to build this image off of
-FROM ubuntu:latest
+FROM circleci/python:2.7
 
 #Install Python and pip
 RUN apt-get update -y && apt-get install -y \
@@ -10,6 +10,7 @@ RUN apt-get update -y && apt-get install -y \
   build-essential
 
 #copy files required for app to run
+COPY . /usr/src/app
 COPY *.py /usr/src/app/
 COPY app /usr/src/app/app
 COPY db_repository /usr/src/app/db_repository
